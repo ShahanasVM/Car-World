@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+</head>
+<style>
+    body{
+        position: relative;
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        background-image: url('https://images.designtrends.com/wp-content/uploads/2015/11/06085041/Red-Ferrari-Car-Background.jpg');
+        background-size: cover;
+        /* background-position: center;
+        background-repeat: no-repeat; */
+    }
+    .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(255, 255, 255, 0.262); /* White overlay with 50% transparency */
+        }
+
+</style>
+<body>
+    <div class="overlay">
+    <h1 class="text-light text-center m-5">Car World</h1>
+    <div class="row">
+        <div class="col-5" >
+            <form class=" text-light text-center shadow m-2 p-5" style="height:450px;" >
+                <h2 class="text-center mb-5 ">Enter Details</h2>
+               <input id="carBrand" class="form-control mb-3" placeholder="Car Brand" type="text">
+                <input id="carPrice" class="form-control mb-3" placeholder="Price" type="text">           
+                <input id="carKey" class="form-control mb-4" aria-placeholder="Key" type="text" placeholder="key">
+                <button onclick="storeRecords(event)" type="submit" class="btn btn-outline-info m-2">Store Records</button>
+            </form>
+        </div>
+        <div class="col-4">
+            <form class=" text-light text-center shadow m-2 p-5" style="height:450px;" >
+                <h2 class="text-center mb-5 ">Enter Key to Retreive Item</h2>         
+                <input id="carId" class="form-control mb-4" aria-placeholder="Key" type="text" placeholder="key">
+                <button onclick="retrieveRecords(event)"  type="submit" class="btn btn-outline-primary m-2">Retreive Records</button>
+                <div id="result" class="ms-5"></div>
+            </form>
+        </div>
+        <div class="col-3">
+            <form class=" text-light text-center shadow m-2 p-5" style="height:450px;" >
+                <h2 class="text-center mb-5 ">Enter Key to Delete Item</h2>         
+                <input id="itemKey" class="form-control mb-4" aria-placeholder="Key" type="text" placeholder="key">
+                <button onclick="removeRecords(event)" type="submit" class="btn btn-outline-danger m-2">Remove Records</button>
+            </form>
+        </div>
+    </div>
+    <div class="d-grid gap-2 col-11 mx-auto ">
+        <button onclick="clearAll(event)" class="btn btn-outline-dark btn-lg mt-5" type="button">Clear All Records</button>
+      </div>
+</div>
+<script src="./home.js"></script>   
+        
+     
+</body>
+</html>
